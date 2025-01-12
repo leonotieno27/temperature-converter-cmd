@@ -26,6 +26,7 @@ def main():
                 quit()  #close program
     except:
         print("Value is not a number")
+        main()
 
 
 #convert celsius to fahrenheit
