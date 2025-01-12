@@ -5,7 +5,7 @@ import os
 def main():
     print('\t\t\t*** Temperature Converter ***\t\t\t')
 
-    print("Convert:")
+    print("choose Convert option(use numbers):")
     print("1. Celsius To Fahrenheit")
     print("2. Fahrenheit To Celsius")
     choice = input()
