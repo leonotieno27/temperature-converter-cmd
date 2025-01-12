@@ -10,6 +10,7 @@ def main():
     print("2. Fahrenheit To Celsius")
     choice = input()
 
+    #if required input call the function
     if int(choice) == 1:
         celsiusToFahrenheit()
     elif int(choice) == 2:
@@ -21,20 +22,22 @@ def main():
             os.system('clear')
             main()
         elif choice2.upper() == 'N':
-            quit()
+            quit()  #close program
 
 
+#convert celsius to fahrenheit
 def celsiusToFahrenheit():
     os.system('clear')
     print('\t\t\t*** Temperature Converter ***\t\t\t')
-    celsius = float(input("Enter the value in °C: "))
+    celsius = float(input("Enter the value in °C: ")) #change data type to float
     ans = (celsius * (9/5)) + 32
     print(f"{celsius}°C is Equal to {ans}F")
  
+ # convert fahrenheit to celsius
 def fahrenheitToCelsius():
-    os.system('clear')
+    os.system('clear')  #clear terminal screen
     print('\t\t\t*** Temperature Converter ***\t\t\t')
-    fahr = float(input("Enter the value in Fahrenheit: "))
+    fahr = float(input("Enter the value in Fahrenheit: ")) #type-casting to user input to float
     ans = 5/9 * (fahr - 32) 
     print(f"{fahr}F is equal to {ans}°C")
 
