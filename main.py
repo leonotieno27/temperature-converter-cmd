@@ -11,18 +11,21 @@ def main():
     choice = input()
 
     #if required input call the function
-    if int(choice) == 1:
-        celsiusToFahrenheit()
-    elif int(choice) == 2:
-        fahrenheitToCelsius()
-    else:
-        print("Input out of range!")
-        choice2 = input("Do you want to try again?(Y/N)")
-        if choice2.upper() == 'Y':
-            os.system('clear')
-            main()
-        elif choice2.upper() == 'N':
-            quit()  #close program
+    try:
+        if int(choice) == 1:
+            celsiusToFahrenheit()
+        elif int(choice) == 2:
+            fahrenheitToCelsius()
+        else:
+            print("Input out of range!")
+            choice2 = input("Do you want to try again?(Y/N)")
+            if choice2.upper() == 'Y':
+                os.system('clear')
+                main()
+            elif choice2.upper() == 'N':
+                quit()  #close program
+    except:
+        print("Value is not a number")
 
 
 #convert celsius to fahrenheit
